@@ -1,0 +1,60 @@
+1.Finding Null Values
+
+a)data.count()->data['header'].value_count()
+b)data.isnull().sum()
+
+2.Plotting Null Values
+
+seaborn:- F1}Univariant analysis---displot(seaborn)
+	  F1,F2}Bivariant analysis---jointplot(seaborn)
+	  more than 2}Univariant analysis---pairplot(seaborn)
+
+A) distplot(distribution of single feature)
+	sns.distplot(df['feature']---->axis is in %
+	sns.displot(df['feature'],kde=False,bins=10)---->axis is in number
+
+tip: use shift key after displot to get documentation
+
+B) jointplot:-
+	sns.Jointplot(x='feature1',y='feature2',data=data,kind='hex')
+
+tip:- kind='reg' also for checking outliers
+
+C) pairplot(Scatterplot):-
+	sns.pairplot(data)
+	also
+	sns.pairplot(data,hue='feature(yes or no))
+
+tip:- 1st statement also use for correlation
+
+
+E1) seaborn plot for Correlation(inter-relationship):-
+1)data.corr()
+2)sns.heatmap(df.corr())
+
+tip:- if correlation b/w two feature is higher THAN you can use 1 feature instead of two
+
+E2) categorial plot(0 & 1):-
+	sns.countplot('feature(cata)',data=data)---->at x axis
+	also
+	sns.countplot(y='feature(cata)',data=data)---->at y axis
+
+E3) bar plot:-
+	sns.barplot(x='feature1',y='feature2',data=data)
+
+tip:- In above statement also change axis
+
+E4) Box plot(categorial feature not allow)
+	sns.boxplot('feature1','feature2',data=data)
+	also
+	sns.boxplot('feature1','feature2',data=data,pallete='rainbow')
+
+tip:- check other pallate by shift key. boxplot also shows outliers
+
+other box plots:-
+sns.boxplot(data=data,orient='v')
+also
+sns.boxplot(x='feature1',y='feature2',hue='feature3',data=data)
+
+E5) Violin plot(shows distribution area):-
+	sns.violinplot(x='feature1',y='feature2,data=data,pallate='rainbow')
