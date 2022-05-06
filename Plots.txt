@@ -52,7 +52,7 @@ sns.set_style('darkgrid')
 
 sns.jointplot(x=data.feature1,y=data.feature2)
 
-A) PLOT KINDS:- 6
+A) PLOT KINDS:- 6(six)
 1)scatter(default)
 2)kde=	curves
 3)reg=	regression

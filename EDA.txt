@@ -57,4 +57,4 @@ also
 sns.boxplot(x='feature1',y='feature2',hue='feature3',data=data)
 
 E5) Violin plot(shows distribution area):-
-	sns.violinplot(x='feature1',y='feature2,data=data,pallate='rainbow')
+	sns.violinplot(x='feature1',y='feature2,data=data,pallate='rainbow');
