@@ -1,3 +1,6 @@
+feature1))
+
+
 A1)displot(histogram,kdeplot,rugplot):-
 
 sns.displot(data.feature)==Normal
