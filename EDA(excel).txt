@@ -1,0 +1,18 @@
+df = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx')    #read only 1st sheet
+df.head()
+
+xls = pd.ExcelFile('KPMG_VI_New_raw_data_update_final.xlsx')	#get all sheet name
+xls.sheet_names
+
+
+df = pd.read_excel('KPMG_VI_New_raw_data_update_final.xlsx', sheet_name="NewCustomerList")    #select sheet
+df.head()
+
+
+df.isnull().sum()			# check null values
+
+df['country'].duplicated().sum()	# check duplicate values in perticular column
+
+
+data=df[df['first_name'].duplicated()==True].sort_values('first_name')			# show duplicate values
+data
